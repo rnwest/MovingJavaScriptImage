@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>gotta go fast</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Telex" rel="stylesheet">
+	<style>
+		/* Popup container - can be anything you want */
+		.popup {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		/* The actual popup */
+		.popup .popuptext {
+			visibility: hidden;
+			width: 500px;
+			background-color: #d02e28;
+			color: #fff;
+			text-align: center;
+			font-family: 'Telex', sans-serif;
+			border-radius: 6px;
+			padding: 8px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -250px;
+		}
+
+		/* Popup arrow */
+		.popup .popuptext::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #d02e28 transparent transparent transparent;
+		}
+
+		/* Toggle this class - hide and show the popup */
+		.popup .show {
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s;
+		}
+
+		/* Add animation (fade in the popup) */
+		@-webkit-keyframes fadeIn {
+			from {opacity: 0;} 
+			to {opacity: 1;}
+		}
+
+		@keyframes fadeIn {
+			from {opacity: 0;}
+			to {opacity:1 ;}
+		}
+		@media screen and (max-width: 768px) {
+			.popup .popuptext{
+				width:180px;
+				margin-left:-90px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="sitecontainer">
+		<h1 id="title">The Superhero Site</h1>
+		<div id="headerimg"><a href="superhomepage.html"><img id="headerimg.png" src="images/headerimg.png"></a></div>
+		<div id="links">
+			<a href="superwwydpage.html">W.W.Y.D</a>
+			<a href="supergamepage.html">GAME</a>
+			<a href="superheroespage.html">HEROES</a>
+		</div>
+		<div id="bottomhalf">
+			<h2 id="paratitle">What Would You Do?</h2>	
+			
+			<div id="wwydimg1"><a href="superhomepage.html"><img id="wwydimg" src="images/wwydimg1.png"></a></div>
+			<p>Iron Man is flying over New York when he sees the Green Goblin throwing pumpkin bombs 
+			at the Empire State Building!  Now, he knows that the Green Goblin is really Spider-Man's 
+			problem, but he can't see Spider-Man anywhere!  If you were Iron Man, would you stop Green 
+			Goblin, even though he isn't YOUR problem?  Would you take responsibility?</p>
+			
+			<center><div class="popup" onclick="myFunction1()">
+			<h3>YES&nbsp;&nbsp;&nbsp;NO</h3><span class="popuptext" id="myPopup1">The correct answer is YES.
+			Even though Green Goblin is really Spider-Man's archnemesis, 
+			as a fellow superhero, it is Iron Man's responsibility to the people he protects to stop the villain!  
+			Just because something might 
+			be someone else's responsibility, doesn't mean you shouldn't help out--especially if that person isn't there or can't take care of it. </span></div></center>
+			
+			<div id="wwydimg2"><a href="superhomepage.html"><img id="wwydimg" src="images/wwydimg2.png"></a></div>
+			<p>Spider-Man wakes up one morning and realizes that, holy cow!  He's in the Venom suit
+			again!  Now, Spider-Man knows that being in the venom suit makes him more powerful--in 
+			fact, it feels amazing to fight crime in, but it also makes him be mean to everyone around 
+			him.  In the suit, he feels strong and can probably fight crime better, but without it, 
+			he's a nicer person who fights with his heart just as much as he does with his fists.  
+			If you were Spider-Man, would you take the suit off, even if it meant you would be weak
+			physically?  Would you sacrifice power to be a better person?</p>
+			
+			<center><div class="popup" onclick="myFunction2()">
+			<h3>YES&nbsp;&nbsp;&nbsp;NO</h3><span class="popuptext" id="myPopup2">Despite being physically stronger 
+			in the suit, Spider-Man becomes mean--almost villainous when he wears it.  Using it goes against everything 
+			it means to be a hero.  In life there will be many times where something feels good to you, but makes you 
+			a bad person.  If you care about other people, it's your responsibility not to give in and let your vices 
+			ruin the hero in you!</span></div></center>
+			
+			<div id="wwydimg3"><a href="superhomepage.html"><img id="wwydimg" src="images/wwydimg3.png"></a></div>
+			<p>Daredevil is in a super secret lab.  He has been investigating some mysterious technology
+			used by his enemies that causes people to become mindless zombies!  
+			The trail has lead him here, and he sees what might be the technology not far away.  
+			However, he's not sure, and there's no one around to interrogate--no one to defend 
+			themselves.  He doesn't want more people to become zombies, but what if someone led him 
+			here in the hopes that he would destroy everything? What if that's not the technology he 
+			was looking for?  If you were Daredevil, would you leave the lab and investigate more? 
+			If so, click yes.  Or would you destroy whatever is there in the hopes that you solved the
+			problem?  If so, click no.</p>
+			
+			<center><div class="popup" onclick="myFunction3()">
+			<h3>YES&nbsp;&nbsp;&nbsp;NO</h3><span class="popuptext" id="myPopup3">It's not fair to accuse people when 
+			they're not there to defend themselves--especially when you're not sure of what the situation is.  
+			Daredevil does investigate more, and he finds out that his enemies led him to that lab so he would destroy 
+			it, because the scientists in that lab were working on a machine to cure the zombies! If he had acted on a false
+			asumption, he would've condemed his city to becoming zombies.</span></div></center>
+	</div>
+	<script>
+	// When the user clicks on div, open the popup
+	function myFunction1() {
+		var popup = document.getElementById("myPopup1");
+		popup.classList.toggle("show");
+	}
+	function myFunction2() {
+		var popup = document.getElementById("myPopup2");
+		popup.classList.toggle("show");
+	}
+	function myFunction3() {
+		var popup = document.getElementById("myPopup3");
+		popup.classList.toggle("show");
+	}
+	</script>	
+</body>
+</html>

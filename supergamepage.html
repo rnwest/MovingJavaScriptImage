@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>The Superhero Site</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Telex" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="supergamepage.js"></script>
+</head>
+<body>
+	<div id="sitecontainer">
+		<h1 id="title">The Superhero Site</h1>
+		<div id="headerimg"><a href="superhomepage.html"><img id="headerimg.png" src="images/headerimg.png"></a></div>
+		<div id="links">
+			<a href="superwwydpage.html">W.W.Y.D</a>
+			<a href="supergamepage.html">GAME</a>
+			<a href="superheroespage.html">HEROES</a>
+		</div>
+		<div id="bottomhalf">
+			<h2 id="paratitle">How Many Cats Can You Save?</h2>	
+			<div id="game">
+				<div id="hiddenimg"><img id="hiddenimg" src="images/header1.png"></div>
+				<canvas id="myCanvas" width="480" height="320"></canvas>
+			</div>
+			<p>Move your mouse to help Superman catch the falling cats!</p>
+		</div>
+	</div>	
+	<script>
+	var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 69, 50);
+      };
+      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+	</script>
+</body>
+</html>
